@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="player" id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+            <audio src="" id="audioPlayer">
+        
+            </audio>
+            <div class="visual">
+                <canvas id="waveformCanvas" width="800" height="200"></canvas>
+            </div>
+            <div id="progress-container">
+                <div id="progress"></div>
+            </div>
+            <div class="controls-container">
+                <div class="controls">
+                    <div class="previa" id="previa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 2v20h-2v-20h2zm18 0l-16 10 16 10v-20z"/></svg>
+                    </div>
+                    <div class="stop" id="stop">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2 2h20v20h-20z"/></svg>
+                    </div>
+                    <div class="play" id="play">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z"/></svg>
+                    </div>
+                    <div class="pause" id="pause">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z"/></svg>
+                    </div>
+                    <div class="siguiente" id="siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 22v-20h2v20h-2zm-18 0l16-10-16-10v20z"/></svg>
+                    </div>
+                </div>
+                <div id="volume-container">
+                    <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+        </div>
+        <button id="addPlayList">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 21h-12v-2h12v2zm4-9l8-1v6.681c-.002 1.555-1.18 2.319-2.257 2.319-.907 0-1.743-.542-1.743-1.61 0-.96.903-1.852 2-2.073v-2.317l-4 .5v4.181c-.002 1.555-1.18 2.319-2.257 2.319-.907 0-1.743-.542-1.743-1.61 0-.96.903-1.852 2-2.073v-5.317zm-4 4.976h-12v-2h12v2zm0-3.976h-12v-2h12v2zm12-4h-24v-2h24v2zm0-4h-24v-2h24v2z"/></svg>
+        </button>
+        <table>
+            <tbody id="playList"></tbody>
+        </table>
+        
+
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
